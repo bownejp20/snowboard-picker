@@ -63,41 +63,11 @@ module.exports = function (app, passport, db, url) {
     console.log(url.parse(req.headers.referer))//paring the url so we can break it down into the diff parts that make it up, referer tells you the page that took you to the next page
     const {pathname, search} = url.parse(req.headers.referer)//deconstructed,looked it up on google
     console.log(pathname + search)
-    db.collection('messages').save({ name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown: 0 }, (err, result) => {
+    db.collection('messages').save({ name: req.body.name, msg: req.body.msg}, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
       res.redirect(pathname + search)
     })
-  })
-
-  app.put('/messages', (req, res) => {
-    db.collection('messages')
-      .findOneAndUpdate({ name: req.body.name, msg: req.body.msg }, {
-        $inc: {
-          thumbUp: 1
-        }
-      }, {
-        sort: { _id: -1 },
-        upsert: true
-      }, (err, result) => {
-        if (err) return res.send(err)
-        res.send(result)
-      })
-  })
-
-  app.put('/messages/thumbDown', (req, res) => {
-    db.collection('messages')
-      .findOneAndUpdate({ name: req.body.name, msg: req.body.msg }, {
-        $inc: {
-          thumbDown: - 1
-        }
-      }, {
-        sort: { _id: -1 },
-        upsert: true  //might be a bug later on that leon leaves and you need to fix
-      }, (err, result) => {
-        if (err) return res.send(err)
-        res.send(result)
-      })
   })
 
   app.delete('/messages', (req, res) => {

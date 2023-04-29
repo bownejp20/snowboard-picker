@@ -5,3 +5,77 @@ body{
 img{
   height: 200px;
 }
+.top{
+  margin-left: 6rem;
+  margin-top: 0.1rem;
+  font-size: calc(1.475rem + 1.5vw);
+}
+.login{
+  margin-left: 6rem;
+  margin-top: 5rem;
+  border:2px solid rgb(82, 141, 82);
+  border-radius: 15px;
+  padding:25px;
+}
+.skills{
+  margin-left: 10rem
+  ;
+  margin-top: 5rem;
+  border-radius: 15px;
+  padding:25px;
+}
+
+.logout {
+  display: inline-block;
+  padding: 10px 10x;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ef7924;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #ebe9e9;
+}
+
+.logout:hover {background-color:rgb(247, 178, 50)}
+
+.logout:active {
+  background-color: rgb(247, 178, 50);
+  box-shadow: 0 5px #e6e0e0;
+  transform: translateY(4px);
+}
+.logout1{
+  font-size: 15px;
+}
+
+.bttn {
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 15px;
+}
+.bttn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.one{
+  background-color: #8ccf8e; /* Green */
+}
+.two{
+  background-color: #4f9051; /* Green */
+}
+.three{
+  background-color: #336034; /* Green */
+}
+.choose{
+  margin-left: 7rem;
+}
