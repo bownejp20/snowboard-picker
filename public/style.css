@@ -109,3 +109,10 @@ img{
     font-size: 15px;
     padding:2px 7px
   }
+
+  .loginCont, .signUpCont{
+    background-color: #ef7924;
+  }
+  .anchors{
+    color:#e6e0e0
+  }
