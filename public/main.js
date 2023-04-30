@@ -18,7 +18,7 @@ Array.from(trash).forEach(function(element) {
   element.addEventListener('click', function(){
     const name = this.parentNode.parentNode.childNodes[1].innerText
     const msg = this.parentNode.parentNode.childNodes[3].innerText
-    console.log(name, msg)
+    console.log(name.length, msg.length)
     fetch('messages', {
       method: 'delete',
       headers: {

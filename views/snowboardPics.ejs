@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,42 +10,44 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/phosphor-icons"></script>
   <title>Snowboard Picker</title>
 </head>
+
 <body>
 
   <div class="boardPics">
-          <img class="male" src="<%= male %>">
-          <span>Male</span>
-          <img class="female" src="<%= female %>">
-          <span>Female</span>
+    <img class="male" src="<%= male %>">
+    <span>Male</span>
+    <img class="female" src="<%= female %>">
+    <span>Female</span>
   </div>
 
-  <h3>Recommendation</h3>
-        <div class="container text-center">
-          <ul class="messages">
-          <% for(var i=0; i<messages.length; i++) {%>
-            <li class="message">
-              <span><%= messages[i].name %></span>
-              <span><%= messages[i].msg %></span>
-              <span><i class="ph ph-trash" aria-hidden="true"></i></span>
-            </li>
-          <% } %>
-          </ul>
-
-          <h2>Add a message</h2>
-        <% if (user?.local?.email) { %>
-          <form action="/messages" method="POST">
-            <input type="text" name="name" placeholder="name">
-            <input type="text" placeholder="message" name="msg">
-            <button class="submitBttn" type="submit">Submit</button>
-          </form>
-        </div>
+  <h3 class="recom">Recommendation</h3>
+  <div class="container text-center">
+    <ul class="messages">
+      <% for(var i=0; i<messages.length; i++) {%>
+        <li class="message">
+          <span><%=messages[i].name%></span>
+          <span><%=messages[i].msg%></span>
+          <span><i class="ph ph-trash" aria-hidden="true"></i></span>
+        </li>
         <% } %>
-      </div>
-    
-  
+    </ul>
+
+    <h2>Add a message</h2>
+    <% if (user?.local?.email) { %>
+      <form action="/messages" method="POST">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" placeholder="message" name="msg">
+        <button class="submitBttn" type="submit">Submit</button>
+      </form>
+  </div>
+  <% } %>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
