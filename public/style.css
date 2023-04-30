@@ -1,3 +1,4 @@
+
 body{
   padding-top:80px;
   word-wrap:break-word;
@@ -79,3 +80,32 @@ img{
 .choose{
   margin-left: 7rem;
 }
+.boardPics{
+  text-align: center;
+  font-size: 25px;
+}
+.female, .male{
+  margin-left: 90px;
+}
+
+h3{
+  text-align: center;
+  background-color: gainsboro;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color:rgb(92, 94, 89);
+  font-family: 'Amatic SC', cursive;
+  font-weight: 600;
+  font-size: 7rem;
+
+}
+
+.submitBttn {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 15px;
+    font-size: 15px;
+    padding:2px 7px
+  }

@@ -7,16 +7,23 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">  
   <script src="https://unpkg.com/phosphor-icons"></script>
   <title>Snowboard Picker</title>
 </head>
 <body>
-  <img src="<%= male %>">
-  <span>Male</span>
-  <img src="<%= female %>">
-  <span>Female</span>
+
+  <div class="boardPics">
+          <img class="male" src="<%= male %>">
+          <span>Male</span>
+          <img class="female" src="<%= female %>">
+          <span>Female</span>
+  </div>
 
   <h3>Recommendation</h3>
+        <div class="container text-center">
           <ul class="messages">
           <% for(var i=0; i<messages.length; i++) {%>
             <li class="message">
@@ -32,10 +39,11 @@
           <form action="/messages" method="POST">
             <input type="text" name="name" placeholder="name">
             <input type="text" placeholder="message" name="msg">
-            <button type="submit">Submit</button>
+            <button class="submitBttn" type="submit">Submit</button>
           </form>
         </div>
         <% } %>
+      </div>
     
   
 </body>
